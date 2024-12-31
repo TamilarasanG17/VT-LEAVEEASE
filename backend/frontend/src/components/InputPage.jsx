@@ -23,7 +23,7 @@ const InputPage = ({ setFormData }) => {
   useEffect(() => {
     const fetchReasons = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/reasons");
+        const response = await fetch("https://vt-leavease.onrender.com/api/reasons");
         const data = await response.json();
         setReasons(data);
       } catch (error) {
@@ -46,7 +46,7 @@ const InputPage = ({ setFormData }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/leaves", {
+      const response = await fetch("https://vt-leavease.onrender.com/api/leaves", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
