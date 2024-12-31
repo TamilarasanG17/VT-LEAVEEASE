@@ -1,0 +1,196 @@
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #f8f9fc, #e2e8f0);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: backgroundAnimation 8s infinite alternate ease-in-out;
+  }
+  
+  @keyframes backgroundAnimation {
+    0% {
+      background: linear-gradient(135deg, #f8f9fc, #e2e8f0);
+    }
+    100% {
+      background: linear-gradient(135deg, #dfe4ea, #ced6e0);
+    }
+  }
+  
+  /* Form Container */
+  .form-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.5s ease forwards;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Page Header */
+  .page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .form-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    animation: fadeIn 2s ease;
+  }
+  
+  .form-title::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #3e8ed0, #6f42c1);
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Form */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: fadeInUp 1.5s ease;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #6f42c1;
+    box-shadow: 0 0 8px rgba(111, 66, 193, 0.2);
+    transform: scale(1.02);
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  /* Select Styling */
+  .form-group select {
+    appearance: none;
+    background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 viewBox%3D%270 0 24 24%27 width%3D%2716%27 height%3D%2716%27 fill%3D%27%23777777%27%3E%3Cpath d%3D%27M7 10l5 5 5-5z%27/%3E%3C/svg%3E') no-repeat right 1rem center;
+    background-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Button */
+  .btn {
+    background: linear-gradient(90deg, #3e8ed0, #6f42c1);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: bounce 2s infinite ease;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  .btn:hover {
+    background: linear-gradient(90deg, #6f42c1, #3e8ed0);
+    transform: translateY(-3px);
+  }
+  
+  .btn:active {
+    transform: translateY(1px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 2rem 1.5rem;
+    }
+  
+    .form-title {
+      font-size: 1.5rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+    }
+  }
+  

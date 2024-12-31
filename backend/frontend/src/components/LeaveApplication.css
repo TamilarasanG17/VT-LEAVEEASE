@@ -1,0 +1,188 @@
+.leave-application-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .leave-application-content {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .leave-letter {
+    text-align: left;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 14px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .leave-letter strong {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .leave-letter p {
+    margin: 10px 0;
+  }
+  
+  .thank-you {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .yours-faithfully {
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: #6a11cb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #2575fc;
+  }
+  
+  .edit-btn {
+    background: #ff6a6a;
+  }
+  
+  .edit-btn:hover {
+    background: #e63946;
+  }
+  
+  .download-btn {
+    background: #36d399;
+  }
+  
+  .download-btn:hover {
+    background: #27ae60;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .no-data {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 300px) {
+    .leave-application-content {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    .leave-letter {
+      font-size: 12px;
+      padding: 15px;
+    }
+  
+    .thank-you, .yours-faithfully {
+      font-size: 14px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+  }
+  
+  @media (max-width: 468px) {
+    .leave-application-content {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .leave-letter {
+      font-size: 13px;
+      padding: 18px;
+    }
+  
+    .thank-you, .yours-faithfully {
+      font-size: 15px;
+    }
+  
+    .btn {
+      font-size: 15px;
+      padding: 9px 18px;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    .leave-application-content {
+      padding: 25px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    .leave-letter {
+      font-size: 14px;
+      padding: 20px;
+    }
+  
+    .thank-you, .yours-faithfully {
+      font-size: 16px;
+    }
+  
+    .btn {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+  
